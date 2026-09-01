@@ -1,0 +1,38 @@
+{
+  "name": "fiscozen-corrispettivi",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fill Fiscozen daily corrispettivi from a Google Sheet of online receipts",
+  "license": "MIT",
+  "author": "fv97",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fv97/fiscozen-corrispettivi.git"
+  },
+  "keywords": [
+    "fiscozen",
+    "corrispettivi",
+    "playwright",
+    "google-sheets",
+    "ditta-individuale",
+    "regime-forfettario",
+    "stripe"
+  ],
+  "scripts": {
+    "login": "node src/index.js login",
+    "google-auth": "node scripts/sheets-oauth-login.mjs",
+    "dry-run": "node src/index.js dry-run",
+    "submit": "node src/index.js submit",
+    "inspect": "node src/index.js inspect",
+    "test": "node src/self-test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "googleapis": "^144.0.0",
+    "playwright": "^1.51.0"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+.secrets/
+data/
+logs/
+.env
+*.log
+playwright-report/
+test-results/
