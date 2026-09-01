@@ -1,6 +1,17 @@
 <div align="center">
 
----
+# fiscozen-corrispettivi
+
+**Corrispettivi su Fiscozen, compilati da un Google Sheet**
+
+[![Node.js](https://img.shields.io/badge/Node.js-20+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Playwright](https://img.shields.io/badge/Playwright-Chromium-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
+[![Google Sheets](https://img.shields.io/badge/Google%20Sheets-API-34A853?style=for-the-badge&logo=googlesheets&logoColor=white)](https://developers.google.com/sheets)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+[Uso](#uso-mensile) · [Prima volta](#prima-volta) · [Template foglio](examples/sheet-template.csv) · [Licenza](LICENSE)
+
+</div>
 
 Ditta individuale, vendite online, pagamenti tipo Stripe. Quasi mai ha senso una fattura elettronica per ogni transazione. Quegli importi finiscono nei **corrispettivi** di Fiscozen: un giorno, un totale, a mano.
 
@@ -24,12 +35,11 @@ Il CSV di Stripe (o di Woo, o del gestionale) **non** va passato così com’è.
 
 Lo script non parla con Stripe. Il foglio è il contratto.
 
-
-|                     |                                                                |
-| --------------------- | ---------------------------------------------------------------- |
-| **Input**           | Tab Google Sheet (`GOOGLE_SHEET_ID` / `GOOGLE_SHEET_TAB`)      |
-| **Aggregazione**    | Somma`total` per giorno, da `created_at` (timezone nel `.env`) |
-| **Output**          | Pagina modifica corrispettivo, campo Importo                   |
+| Cosa | Dettaglio |
+|---|---|
+| **Input** | Tab Google Sheet (`GOOGLE_SHEET_ID` / `GOOGLE_SHEET_TAB`) |
+| **Aggregazione** | Somma `total` per giorno, da `created_at` (timezone nel `.env`) |
+| **Output** | Pagina modifica corrispettivo, campo Importo |
 | **Un mese per run** | Le righe di agosto restano ferme finché non hai finito luglio |
 
 ## Prima volta
