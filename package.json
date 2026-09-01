@@ -5,10 +5,10 @@
   "type": "module",
   "description": "Fill Fiscozen daily corrispettivi from a Google Sheet of online receipts",
   "license": "MIT",
-  "author": "fv97",
+  "author": "fabiovalla97",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fv97/fiscozen-corrispettivi.git"
+    "url": "https://github.com/fabiovalla97/fiscozen-corrispettivi.git"
   },
   "keywords": [
     "fiscozen",
